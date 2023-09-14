@@ -1,6 +1,5 @@
 package com.olvera.discountapp.views
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import com.olvera.discountapp.components.MainButton
 import com.olvera.discountapp.components.MainTextField
 import com.olvera.discountapp.components.SpaceH
+import com.olvera.discountapp.components.TwoCards
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -55,6 +55,15 @@ fun ContentHomeView(paddingValues: PaddingValues) {
 
         var price by remember { mutableStateOf("") }
         var discount by remember { mutableStateOf("") }
+        val priceDiscount by remember { mutableStateOf(0.0) }
+        val totalDiscount by remember { mutableStateOf(0.0) }
+
+        TwoCards(
+            title1 = "Total",
+            number1 = totalDiscount,
+            title2 = "Discount",
+            number2 = priceDiscount
+        )
 
         MainTextField(
             value = price,
