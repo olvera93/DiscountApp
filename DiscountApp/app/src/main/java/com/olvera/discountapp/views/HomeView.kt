@@ -20,6 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import com.olvera.discountapp.components.MainButton
 import com.olvera.discountapp.components.MainTextField
 import com.olvera.discountapp.components.SpaceH
 
@@ -48,7 +49,7 @@ fun ContentHomeView(paddingValues: PaddingValues) {
             .padding(paddingValues)
             .padding(10.dp)
             .fillMaxSize(),
-        verticalArrangement = Arrangement.Center,
+        //verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
 
@@ -68,6 +69,17 @@ fun ContentHomeView(paddingValues: PaddingValues) {
             onValueChange = { discount = it },
             label = "Discount"
         )
+
+        SpaceH(10.dp)
+
+        MainButton(text = "Discount generator") {
+
+        }
+
+        SpaceH()
+        MainButton(text = "Clear", color = Color.Red) {
+
+        }
 
     }
 
