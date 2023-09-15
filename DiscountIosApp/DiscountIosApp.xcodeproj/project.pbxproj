@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28A1FCC52AB4A4CA00CB76F4 /* CardComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A1FCC42AB4A4CA00CB76F4 /* CardComponent.swift */; };
+		28A1FCC82AB4AA9C00CB76F4 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = 28A1FCC72AB4AA9C00CB76F4 /* SwiftUIX */; };
 		28B7C3A12AB379BF00B69F22 /* DiscountIosAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B7C3A02AB379BF00B69F22 /* DiscountIosAppApp.swift */; };
 		28B7C3A32AB379BF00B69F22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B7C3A22AB379BF00B69F22 /* ContentView.swift */; };
 		28B7C3A52AB379C200B69F22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B7C3A42AB379C200B69F22 /* Assets.xcassets */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28A1FCC42AB4A4CA00CB76F4 /* CardComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardComponent.swift; sourceTree = "<group>"; };
 		28B7C39D2AB379BF00B69F22 /* DiscountIosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscountIosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B7C3A02AB379BF00B69F22 /* DiscountIosAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountIosAppApp.swift; sourceTree = "<group>"; };
 		28B7C3A22AB379BF00B69F22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28A1FCC82AB4AA9C00CB76F4 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				28D3B4072AB3C998001BCC53 /* BodyComponents.swift */,
+				28A1FCC42AB4A4CA00CB76F4 /* CardComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -105,6 +110,9 @@
 			dependencies = (
 			);
 			name = DiscountIosApp;
+			packageProductDependencies = (
+				28A1FCC72AB4AA9C00CB76F4 /* SwiftUIX */,
+			);
 			productName = DiscountIosApp;
 			productReference = 28B7C39D2AB379BF00B69F22 /* DiscountIosApp.app */;
 			productType = "com.apple.product-type.application";
@@ -133,6 +141,9 @@
 				Base,
 			);
 			mainGroup = 28B7C3942AB379BF00B69F22;
+			packageReferences = (
+				28A1FCC62AB4AA9C00CB76F4 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = 28B7C39E2AB379BF00B69F22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -162,6 +173,7 @@
 				28D3B4052AB3C943001BCC53 /* HomeView.swift in Sources */,
 				28B7C3A32AB379BF00B69F22 /* ContentView.swift in Sources */,
 				28B7C3A12AB379BF00B69F22 /* DiscountIosAppApp.swift in Sources */,
+				28A1FCC52AB4A4CA00CB76F4 /* CardComponent.swift in Sources */,
 				28D3B4082AB3C998001BCC53 /* BodyComponents.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		28A1FCC62AB4AA9C00CB76F4 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		28A1FCC72AB4AA9C00CB76F4 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28A1FCC62AB4AA9C00CB76F4 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 28B7C3952AB379BF00B69F22 /* Project object */;
 }

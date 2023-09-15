@@ -9,14 +9,22 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State private var value: String = ""
+    @State private var price: String = ""
+    @State private var discount: String = ""
     
     var body: some View {
         VStack {
-            MainTextField(value: $value, label: "Price")
+            
+            TwoCardComponent(title1: "Price", number1: 0.12, title2: "Discount", number2: 10.31)
+            
+            MainTextField(value: $price, label: "Price")
                 .padding(.horizontal, 30)
-            MainTextField(value: $value, label: "Discount")
+            
+            MainTextField(value: $discount, label: "Discount")
                 .padding(.horizontal, 30)
+            
+            MainButton()
+            
         }
     }
 }

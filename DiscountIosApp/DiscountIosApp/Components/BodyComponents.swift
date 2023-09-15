@@ -13,9 +13,8 @@ struct MainTextField: View {
     let label: String
     
     var body: some View {
-        ZStack(alignment: .leading) {
-            
-            
+        ZStack() {
+        
             TextField(label, text: $value)
                 .padding(.horizontal, 8)
         }
@@ -26,4 +25,19 @@ struct MainTextField: View {
         )
     }
 }
+
+struct MainButton: View {
+    
+    @State var isButtonPressed = false
+    
+    var body: some View {
+        Button(action: {
+            isButtonPressed.toggle()
+        }) {
+            Text("Texto del Botón")
+        }
+    }
+}
+
+
 
