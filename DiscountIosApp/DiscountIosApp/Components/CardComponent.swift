@@ -10,13 +10,16 @@ import SwiftUIX
 
 struct CardComponent: View {
     
-    var title: String
+    let title: String
     var number: Double
     
     var body: some View {
         
+        let formattedNumber = String(format: "$%.2f", number)
+        
         RoundedRectangle(cornerRadius: 12)
             .fill(Color.lightGray)
+            .opacity(0.6)
             .frame(width: 150, height: 100)
             .overlay(
                 VStack(alignment: .center) {
@@ -24,7 +27,7 @@ struct CardComponent: View {
                         .font(.system(size: 30))
                         .padding(.top, 10)
                     
-                    Text("$\(number)")
+                    Text(formattedNumber)
                         .font(.system(size: 20))
                 }
                     .padding(10)
@@ -34,18 +37,18 @@ struct CardComponent: View {
 
 struct TwoCardComponent: View {
     
-    var title1: String
+    let title1: String
     var number1: Double
-    var title2: String
+    let title2: String
     var number2: Double
     
     var body: some View {
         
-        HStack(alignment: .center) {
+        HStack {
             CardComponent(title: title1, number: number1)
-                .padding(.leading, 30)
+                
             CardComponent(title: title2, number: number2)
-                .padding(.trailing, 30)
+                
         }
     }
 }

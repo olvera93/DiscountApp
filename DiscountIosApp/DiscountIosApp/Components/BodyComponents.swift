@@ -13,29 +13,39 @@ struct MainTextField: View {
     let label: String
     
     var body: some View {
-        ZStack() {
         
-            TextField(label, text: $value)
-                .padding(.horizontal, 8)
-        }
-        .padding()
-        .overlay(
-            RoundedRectangle(cornerRadius: 8)
-                .stroke(Color.gray, lineWidth: 1)
-        )
+        
+        TextField(label, text: $value)
+            .padding(.horizontal, 8)
+        
+            .padding()
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.gray, lineWidth: 1)
+            )
     }
 }
 
 struct MainButton: View {
     
-    @State var isButtonPressed = false
+    @Binding var isButtonPressed: Bool
+    let title: String
+    let backgroundColor: Color
+    let action: () -> Void
     
     var body: some View {
         Button(action: {
             isButtonPressed.toggle()
+            action()
         }) {
-            Text("Texto del Botón")
-        }
+            Text(title)
+                .foregroundColor(backgroundColor) // Color del texto
+                .frame(maxWidth: .infinity)
+                .padding()
+                .border(Color.black, width: 1)
+                .background(Color.clear) // Color de fondo personalizado
+        }.cornerRadius(4)
+        .padding(.horizontal, 30)
     }
 }
 
